@@ -16,10 +16,16 @@
 
           buildInputs = with pkgs; [
             rustup
-            pkgconfig
-            libX11
-            libxcb
-            opengl
+            pkg-config
+            xorg.libX11
+            xorg.libxcb
+            xorg.libXcursor
+            xorg.libXrandr
+            xorg.libXi
+            xorg.libXrender
+            xorg.libXxf86vm
+            xorg.xrandr
+            mesa
             glibc
             cmake
           ];
@@ -43,9 +49,15 @@
 
           buildInputs = with pkgs; [
             pkgconfig
-            libX11
-            libxcb
+            xorg.libX11
+            xorg.libxcb
+            xorg.libXcursor
+            xorg.libXrandr
+            xorg.libXi
+            xorg.libXrender
+            xorg.libXxf86vm
             opengl
+            mesa
             glibc
           ];
 
